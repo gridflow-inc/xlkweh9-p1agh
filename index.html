@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>GridFlow</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo"><img src="logo-image.png" alt="GridFlow Logo"> GridFlow</a>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>        
+        <div class="nav-divider"></div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <div class="hero-heading">
+                    <h1>Electric Vehicle Charging Made Simple</h1>
+                </div>
+                <p>GridFlow provides an end-to-end solution for EV drivers, property owners, and charging station operators.</p>
+                <a href="#" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>For EV Drivers</h3>
+            <div class="ui-element">UI Element</div>
+            <p>Find and pay for charging stations with our mobile app.</p>
+        </div>
+        <div class="feature">
+            <h3>For Property Owners</h3>
+            <div class="ui-element">UI Element</div>
+            <p>Manage and monitor your charging stations through our web portal.</p>
+        </div>
+        <div class="feature">
+            <h3>For Charging Station Operators</h3>
+            <div class="ui-element">UI Element</div>
+            <p>Optimize your operations with our powerful backend system.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; GridFlow 2023. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.style.display = navLinks.style.display === 'none' ? 'flex' : 'none';
+        });
+        </script>        
+</body>
+</html>
