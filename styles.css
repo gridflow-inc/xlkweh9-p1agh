@@ -4,18 +4,49 @@
     box-sizing: border-box;
 }
 
+html {
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+}
+
+html::-webkit-scrollbar {
+    width: 0;
+    /* Hide scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+}
+
 body {
+    margin: -1px 0 0 0;
+    /* Add a small negative margin to the body */
+    padding: 0;
+    /* Reset padding for the body */
     font-family: Arial, sans-serif;
     background-color: #222;
     color: #fff;
+    overflow-y: scroll;
+    /* Always show the vertical scrollbar space (prevents content from shifting) */
+    -ms-overflow-style: none;
+    /* Hide scrollbar for IE and Edge */
+    min-height: 100vh;
+    /* Make sure the body covers the entire viewport */
+}
+
+
+button:focus,
+button:active {
+    outline: none;
+    border: none;
 }
 
 header {
-    padding: 1.5rem 1rem;
+    padding: 2rem 1rem;
+    /* Increase the padding to make the navbar bigger */
     position: absolute;
     width: 100%;
     z-index: 100;
 }
+
 
 nav {
     display: flex;
@@ -39,7 +70,12 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
+    margin: 0;
+    /* Reset margin for the ul */
+    padding: 0;
+    /* Reset padding for the ul */
 }
+
 
 nav ul li {
     margin-left: 1rem;
@@ -50,49 +86,147 @@ nav ul li a {
     text-decoration: none;
 }
 
-.nav-divider {
-    height: 1px;
-    background-color: #fff;
-    width: 95%;
-    margin: 0 auto;
-    opacity: 0.5;
+
+.hero-background {
+    margin: -1px 0 0 0;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
 }
 
 .hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding: 0 2rem;
     padding-bottom: 2rem;
 }
 
-.hero-content {
-    text-align: center;
+.overlay {
+    background: url('overlay.png') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
 }
+
+
+
+.hero-content {
+    margin-top: 5rem;
+    text-align: center;
+    max-width: 700px;
+    /* Constrain the width of the hero content */
+    margin-left: 2rem;
+    /* Add left margin to maintain the position on the left side */
+    background: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent white background */
+    backdrop-filter: blur(15px);
+    /* Apply a blur effect */
+    border-radius: 20px;
+    /* Add rounded corners */
+    padding: 4rem;
+    /* Add padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+
+    /* Add a subtle shadow */
+
+}
+
+.hero-wrapper {
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    background-color: rgba(193, 138, 0, 0.626);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    will-change: transform;
+}
+
+.circle-1 {
+    width: 200px;
+    height: 200px;
+    top: 200px;
+    left: -100px;
+}
+
+.circle-2 {
+    width: 150px;
+    height: 150px;
+    top: 0px;
+    right: -5px;
+}
+
+.circle-3 {
+    width: 300px;
+    height: 300px;
+    bottom: -120px;
+    left: 300px;
+}
+
+
+.hero-content:hover {
+    transform: scale(1.02);
+}
+
+
 
 .hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 5rem;
+    font-weight: 100;
+    /* Set the font weight to UltraLight */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Set the font family to Helvetica UltraLight */
+    letter-spacing: 5px;
+    /* Increase character spacing */
+    margin-bottom: 2rem;
+    word-wrap: break-word;
+    /* Break long words to fit within the container */
 }
 
+
 .hero-content p {
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    /* Set the font weight to light */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Set the font family to Helvetica Light */
+    margin-bottom: 2rem;
 }
+
 
 .cta-button {
     display: inline-block;
-    background-color: #f07d00;
+    background-color: rgb(226, 169, 62);
+    /* Set background-color with rgba() */
     color: #fff;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 3px;
-    transition: background-color 0.3s;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+    /* Add border-color to the transition */
+    border: 2px solid rgba(255, 255, 255, 1);
+    /* Set border color with rgba() */
 }
 
 .cta-button:hover {
-    background-color: #f2d600;
+    background-color: rgba(242, 214, 0, 0);
+    /* Change background-color with transparency on hover */
+    border-color: rgba(242, 214, 0, 0.8);
+    /* Change border color with transparency on hover */
 }
+
+
 
 .features {
     display: flex;
@@ -115,6 +249,35 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+    .hero-content {
+        max-width: 80%;
+        /* Increase the width for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content {
+        max-width: 90%;
+        /* Increase the width for mobile devices */
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        /* Decrease the font size for mobile devices */
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        /* Decrease the font size for mobile devices */
+    }
+
+    .cta-button {
+        padding: 0.5rem 1rem;
+        /* Decrease the padding for mobile devices */
+    }
 }
 
 footer {

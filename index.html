@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav>
-            <a href="#" class="logo"><img src="logo-image.png" alt="GridFlow Logo"> GridFlow</a>
+            <a href="#" class="logo"><img src="logo-image.png" alt="GridFlow Logo"> </a>
             <div class="menu-toggle" id="menu-toggle">
                 <span></span>
                 <span></span>
@@ -25,21 +25,24 @@
                 </ul>
             </div>
         </nav>        
-        <div class="nav-divider"></div>
     </header>
-
+    
     <section class="hero">
+        <div class="hero-background"></div>
         <div class="hero-wrapper">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
             <div class="hero-content">
                 <div class="hero-heading">
-                    <h1>Electric Vehicle Charging Made Simple</h1>
+                    <h1>EV Charging Made Simple</h1>
                 </div>
                 <p>GridFlow provides an end-to-end solution for EV drivers, property owners, and charging station operators.</p>
-                <a href="#" class="cta-button">Get Started</a>
+                <a href="#" class="cta-button">Talk to us</a>
             </div>
         </div>
     </section>
-
+    <div class="overlay"></div>
     <section class="features">
         <div class="feature">
             <h3>For EV Drivers</h3>
@@ -62,10 +65,37 @@
         <p>&copy; GridFlow 2023. All rights reserved.</p>
     </footer>
     <script>
-        document.getElementById('menu-toggle').addEventListener('click', function () {
-            var navLinks = document.getElementById('nav-links');
-            navLinks.style.display = navLinks.style.display === 'none' ? 'flex' : 'none';
+        const heroContent = document.querySelector('.hero-content');
+        const circles = document.querySelectorAll('.circle');
+
+        function updateCircles() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            circles.forEach((circle, index) => {
+                const factor = 0.1 * (index + 1);
+                circle.style.transform = `translateY(${scrollTop * factor}px)`;
+            });
+        }
+
+        window.addEventListener('scroll', updateCircles);
+
+        heroContent.addEventListener('mouseenter', () => {
+            circles.forEach((circle, index) => {
+                const factor = 10 * (index + 1);
+                circle.style.transition = 'transform 0.3s';
+                circle.style.transform += `translate(${factor}px, ${factor}px)`;
+            });
         });
-        </script>        
+
+        heroContent.addEventListener('mouseleave', () => {
+            circles.forEach((circle) => {
+                circle.style.transition = 'transform 0.3s';
+                circle.style.transform = circle.style.transform.replace(/translate\(\d+px, \d+px\)/, '');
+                updateCircles();
+            });
+        });
+
+    </script>
+  
+          
 </body>
 </html>
