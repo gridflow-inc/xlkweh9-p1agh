@@ -8,94 +8,88 @@
     <title>GridFlow</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#" class="logo"><img src="logo-image.png" alt="GridFlow Logo"> </a>
-            <div class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="nav-links" id="nav-links">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Contact</a></li>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <a href="#" class="logo">
+                    <img src="logo-image.png" alt="Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#"><span>Features</span></a></li>
+                    <li><a href="#"><span>Pricing</span></a></li>
+                    <li><a href="#"><span>Contact</span></a></li>
                 </ul>
-            </div>
-        </nav>        
-    </header>
-    
-    <section class="hero">
-        <div class="hero-background"></div>
-        <div class="hero-wrapper">
-            <div class="circle circle-1"></div>
-            <div class="circle circle-2"></div>
-            <div class="circle circle-3"></div>
-            <div class="hero-content">
-                <div class="hero-heading">
-                    <h1>EV Charging Made Simple</h1>
+            </nav>                   
+        </header>
+        
+        <section class="hero">
+            <div class="hero-background"></div>
+            <div class="overlay"></div>
+            <div class="hero-wrapper">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+                <div class="circle circle-3"></div>
+                <div class="hero-content">
+                    <div class="hero-heading">
+                        <h1>EV Charging Made Simple</h1>
+                    </div>
+                    <p>GridFlow provides an end-to-end solution for EV drivers, property owners, and charging station operators.</p>
+                    <a href="#" class="cta-button">Talk to us</a>
                 </div>
-                <p>GridFlow provides an end-to-end solution for EV drivers, property owners, and charging station operators.</p>
-                <a href="#" class="cta-button">Talk to us</a>
+            </div>
+        </section>
+    </div>
+
+    <section class="showcase">
+        <div class="showcase-content">
+            <h2>Powering the Future of EV Charging</h2>
+            <p>Maximize revenue, optimize energy usage, and ensure uptime with our AI-powered software suite</p>
+        </div>
+        
+        <div class="showcase-image">
+            <img src="dashboard-mockup.png" alt="Dashboard on iPad">    
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-container">
+            <div class="feature" data-feature="software-suite">
+                <div class="icon-wrapper">
+                    <img src="software-suite-icon.svg" alt="Software Suite Icon" class="feature-icon">
+                </div>
+                <h3>GridFlow Software Suite</h3>
+                <p>Our comprehensive software suite helps deploy and manage EV charging infrastructure.</p>
+            </div>
+            <div class="feature" data-feature="ai-powered">
+                <div class="icon-wrapper">
+                    <img src="ai-powered-icon.svg" alt="AI-powered Features Icon" class="feature-icon">
+                </div>
+                <h3>AI-Powered Features</h3>
+                <p>GridFlow integrates AI algorithms for enhanced efficiency and user experience.</p>
+            </div>
+            <div class="feature" data-feature="mobile-app">
+                <div class="icon-wrapper">
+                    <img src="mobile-app-icon.svg" alt="Mobile App for EV Drivers Icon" class="feature-icon">
+                </div>
+                <h3>Mobile App for EV Drivers</h3>
+                <p>Our user-friendly mobile app offers real-time charging station information and more.</p>
+            </div>
+        </div>
+        <div class="feature-modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 class="modal-title"></h2>
+                <p class="modal-description"></p>
             </div>
         </div>
     </section>
-    <div class="overlay"></div>
-    <section class="features">
-        <div class="feature">
-            <h3>For EV Drivers</h3>
-            <div class="ui-element">UI Element</div>
-            <p>Find and pay for charging stations with our mobile app.</p>
-        </div>
-        <div class="feature">
-            <h3>For Property Owners</h3>
-            <div class="ui-element">UI Element</div>
-            <p>Manage and monitor your charging stations through our web portal.</p>
-        </div>
-        <div class="feature">
-            <h3>For Charging Station Operators</h3>
-            <div class="ui-element">UI Element</div>
-            <p>Optimize your operations with our powerful backend system.</p>
-        </div>
-    </section>
+    
+    
 
     <footer>
-        <p>&copy; GridFlow 2023. All rights reserved.</p>
+        <p>&copy; GridFlow Inc. 2023. All rights reserved.</p>
     </footer>
-    <script>
-        const heroContent = document.querySelector('.hero-content');
-        const circles = document.querySelectorAll('.circle');
-
-        function updateCircles() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            circles.forEach((circle, index) => {
-                const factor = 0.1 * (index + 1);
-                circle.style.transform = `translateY(${scrollTop * factor}px)`;
-            });
-        }
-
-        window.addEventListener('scroll', updateCircles);
-
-        heroContent.addEventListener('mouseenter', () => {
-            circles.forEach((circle, index) => {
-                const factor = 10 * (index + 1);
-                circle.style.transition = 'transform 0.3s';
-                circle.style.transform += `translate(${factor}px, ${factor}px)`;
-            });
-        });
-
-        heroContent.addEventListener('mouseleave', () => {
-            circles.forEach((circle) => {
-                circle.style.transition = 'transform 0.3s';
-                circle.style.transform = circle.style.transform.replace(/translate\(\d+px, \d+px\)/, '');
-                updateCircles();
-            });
-        });
-
-    </script>
-  
+    <script src="main.js"></script>
           
 </body>
 </html>
