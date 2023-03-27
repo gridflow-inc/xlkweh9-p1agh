@@ -1,4 +1,8 @@
 
+AOS.init({
+    duration: 1000, // Animation duration in milliseconds (e.g., 1000ms = 1s)
+    once: true, // Whether the animation should happen only once or every time you scroll
+  });
 const heroContent = document.querySelector('.hero-content');
 const circles = document.querySelectorAll('.circle');
 
@@ -29,12 +33,13 @@ heroContent.addEventListener('mouseleave', () => {
 });
 
 function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
+    const navLinks = document.querySelector(".nav-links");
     navLinks.classList.toggle("active");
 }
 
-const menuToggle = document.getElementById("menu-toggle");
+const menuToggle = document.querySelector("#menu-toggle");
 menuToggle.addEventListener("click", toggleMenu);
+
 
 const features = document.querySelectorAll('.feature');
 const featureModal = document.querySelector('.feature-modal');
@@ -81,29 +86,3 @@ featureModal.addEventListener('click', (e) => {
         closeFeatureModal();
     }
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-    const showcaseImage = document.querySelector(".showcase-image");
-    const showcaseImageImg = document.querySelector(".showcase-image img");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            showcaseImageImg.style.animationName = "moveInFromRight";
-            showcaseImageImg.style.animationDuration = "1s";
-            showcaseImageImg.style.animationTimingFunction = "ease-out";
-          } else {
-            showcaseImageImg.style.animationName = "";
-            showcaseImageImg.style.animationDuration = "";
-            showcaseImageImg.style.animationTimingFunction = "";
-          }
-        });
-      },
-      { threshold: 0.7 }
-    );
-
-    observer.observe(showcaseImage);
-  });
-
-

@@ -8,6 +8,7 @@ html {
     margin: 0;
     padding: 0;
     scrollbar-width: none;
+    scroll-behavior: smooth
     /* Hide scrollbar for Firefox */
 }
 
@@ -42,6 +43,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 15px;
+    left: 8px;
+    max-width: 98%;
 }
 
 .logo {
@@ -50,6 +54,7 @@ nav {
     font-size: 1.5rem;
     display: flex;
     align-items: center;
+    margin-left : 17px;
 }
 
 .logo img {
@@ -94,7 +99,11 @@ nav ul li a:hover {
     color: #fff;
 }
 
-
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+  }
+  
 
 /* Add the following code */
 .wrapper {
@@ -303,15 +312,54 @@ header {
     width: auto;
 }
 
-@keyframes moveInFromRight {
-    0% {
-        transform: translateX(100%) translateY(-50%);
-    }
-    100% {
-        transform: translateX(0) translateY(-50%);
-    }
+.industries {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 5%;
 }
 
+.industries-content {
+    max-width: 50%;
+}
+
+.industries-carousel {
+    width: 50%;
+}
+
+.carousel {
+    position: relative;
+}
+
+.carousel-item {
+    display: none;
+}
+
+.carousel-item:first-child {
+    display: block;
+}
+
+.industry-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+.industry-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
 
 
 
@@ -331,6 +379,20 @@ header {
     }
 }
 
+
+
+
+
+.feature-header {
+    max-width: 45%;
+}
+
+.feature-header h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-bottom: 1rem;
+}
 
 .features {
     display: flex;
