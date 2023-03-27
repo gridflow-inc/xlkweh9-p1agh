@@ -149,6 +149,7 @@ header {
     width: 100%;
     height: 100%;
     will-change: transform;
+    border-radius: 20px;
 }
 
 .overlay {
@@ -181,6 +182,7 @@ header {
     /* Add padding */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    z-index: 6;
 
     /* Add a subtle shadow */
 
@@ -321,33 +323,80 @@ header {
 }
 
 .industries-content {
-    max-width: 50%;
+    max-width: 50vw;
+    text-align: center;
 }
 
+.industries-content h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-bottom: 1rem;
+}
+
+.industries-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
 .industries-carousel {
     width: 50%;
+  }
+  
+  .swiper {
+    width: 70vh;
+    height: 80vh;
+  }
+  
+  .swiper-slide {
+    height: 70vh !important;
+    width: 70vh !important;
+    border-radius: 15px !important;
+    
+
+  }
+  
+  /* .carousel-text-glass {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 1rem;
+    backdrop-filter: blur(5px);
+    box-shadow: 0  3px 3px rgba(0, 0, 0, 0.6);
+    width: 50%;
+    text-align: center;
+     
+  } */
+
+.swiper-pagination {
+    bottom: 3rem !important;
+  }
+/* Change the default bullet style */
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff52 !important;
+    opacity: 0.8 !important;
 }
 
-.carousel {
-    position: relative;
+/* Change the active bullet style */
+.swiper-pagination-bullet-active {
+    background-color: #fd992776 !important;
+    opacity: 1 !important;
 }
 
-.carousel-item {
-    display: none;
-}
 
-.carousel-item:first-child {
-    display: block;
-}
-
-.industry-card {
+  
+  .industry-card {
     position: relative;
     background-size: cover;
     background-position: center;
-    height: 300px;
-}
-
-.industry-overlay {
+    height: 100%;
+    border-radius: 15px;
+    
+  }
+  
+  .industry-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -359,6 +408,47 @@ header {
     justify-content: center;
     align-items: center;
     color: #fff;
+    border-radius: 15px;
+  }
+  
+  .carousel-text-glass h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}
+
+.carousel-text-glass p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 80%;
+    margin-left: 2rem;
+   
+
+}
+
+.industry-overlay h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}
+
+.industry-overlay p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 80%;
+    margin-left: 2rem;
+   
+
 }
 
 

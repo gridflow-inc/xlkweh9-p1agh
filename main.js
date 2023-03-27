@@ -3,6 +3,7 @@ AOS.init({
     duration: 1000, // Animation duration in milliseconds (e.g., 1000ms = 1s)
     once: true, // Whether the animation should happen only once or every time you scroll
   });
+
 const heroContent = document.querySelector('.hero-content');
 const circles = document.querySelectorAll('.circle');
 
@@ -86,3 +87,7 @@ featureModal.addEventListener('click', (e) => {
         closeFeatureModal();
     }
 });
+
+
+
+

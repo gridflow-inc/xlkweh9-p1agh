@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" />
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
     <title>GridFlow</title>
 </head>
 <body>
@@ -54,71 +56,83 @@
         </div>
     </section>
 
-    <section class="industries">
-        <div class="industries-content">
+    <section class="industries" >
+        <div class="industries-carousel"data-aos="fade-right">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <!-- Residential Complexes -->
+                <div class="swiper-slide">
+                    <div class="industry-card" style="background-image: url('residential-complexes.jpg');">
+                      <div class="industry-overlay">
+                        <h3>Residential Complexes</h3>
+                        <p>Implement and manage smart EV charging infrastructure for residential buildings, ensuring seamless access for tenants.</p>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Commercial Parking -->
+                <div class="swiper-slide">
+                  <div class="industry-card" style="background-image: url('commercial-parking.jpg');">
+                    <div class="industry-overlay">
+                      <h3>Commercial Parking</h3>
+                      <p>Optimize charging infrastructure in commercial parking facilities, increasing revenue and customer satisfaction.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Charging Station Operators -->
+                <div class="swiper-slide">
+                  <div class="industry-card" style="background-image: url('charging-station-operators.png');">
+                    <div class="industry-overlay">
+                      <h3>Charging Station Operators</h3>
+                      <p>Efficiently manage and monitor multiple charging stations with a centralized platform and real-time analytics.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Shopping Malls -->
+                <div class="swiper-slide">
+                  <div class="industry-card" style="background-image: url('shopping-malls.png');">
+                    <div class="industry-overlay">
+                      <h3>Shopping Malls</h3>
+                      <p>Attract customers and generate revenue by offering convenient, efficient EV charging services at shopping centers.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Government Entities -->
+                <div class="swiper-slide">
+                  <div class="industry-card" style="background-image: url('government-entities.png');">
+                    <div class="industry-overlay">
+                      <h3>Government Entities</h3>
+                      <p>Support sustainable urban development with reliable, easy-to-use EV charging infrastructure for public spaces.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Workplaces -->
+                <div class="swiper-slide">
+                  <div class="industry-card" style="background-image: url('workplaces.png');">
+                    <div class="industry-overlay">
+                      <h3>Workplaces</h3>
+                      <p>Enhance employee satisfaction and support sustainability goals with accessible EV charging solutions at the workplace.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Hotels -->
+                <div class="swiper-slide">
+                  <div class="industry-card" style="background-image: url('hotels.png');">
+                    <div class="industry-overlay">
+                      <h3>Hotels</h3>
+                      <p>Offer guests a seamless and convenient EV charging experience, differentiating your property in the hospitality market.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          
+        <div class="industries-content"data-aos="fade-left">
             <h2>Powering a Range of Industries</h2>
             <p>Our versatile EV charging solutions cater to various sectors</p>
         </div>
-        <div class="industries-carousel">
-            <div class="carousel">
-                <div class="carousel-item">
-                    <div class="industry-card" style="background-image: url('commercial-parking.jpg');">
-                        <div class="industry-overlay">
-                            <h3>Commercial Parking</h3>
-                            <p>Optimize charging infrastructure in commercial parking facilities, increasing revenue and customer satisfaction.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="industry-card" style="background-image: url('charging-station-operators.jpg');">
-                        <div class="industry-overlay">
-                            <h3>Charging Station Operators</h3>
-                            <p>Efficiently manage and monitor multiple charging stations with a centralized platform and real-time analytics.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="industry-card" style="background-image: url('residential-complexes.jpg');">
-                        <div class="industry-overlay">
-                            <h3>Residential Complexes</h3>
-                            <p>Implement and manage smart EV charging infrastructure for residential buildings, ensuring seamless access for tenants.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="industry-card" style="background-image: url('shopping-malls.jpg');">
-                        <div class="industry-overlay">
-                            <h3>Shopping Malls</h3>
-                            <p>Attract customers and generate revenue by offering convenient, efficient EV charging services at shopping centers.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="industry-card" style="background-image: url('government-entities.jpg');">
-                        <div class="industry-overlay">
-                            <h3>Government Entities</h3>
-                            <p>Support sustainable urban development with reliable, easy-to-use EV charging infrastructure for public spaces.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="industry-card" style="background-image: url('workplaces.jpg');">
-                        <div class="industry-overlay">
-                            <h3>Workplaces</h3>
-                            <p>Enhance employee satisfaction and support sustainability goals with accessible EV charging solutions at the workplace.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="industry-card" style="background-image: url('hotels.jpg');">
-                        <div class="industry-overlay">
-                            <h3>Hotels</h3>
-                            <p>Offer guests a seamless and convenient EV charging experience, differentiating your property in the hospitality market.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
     </section>
     
 
@@ -164,6 +178,22 @@
         <p>&copy; GridFlow Inc. 2023. All rights reserved.</p>
     </footer>
     <script src="main.js"></script>
-          
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper('.swiper', {
+          loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        });
+      });
+    </script>
+                  
 </body>
 </html>
