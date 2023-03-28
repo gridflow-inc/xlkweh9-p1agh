@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+     window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -8,8 +13,15 @@
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="icon" type="image/png" href="favicon.png" sizes="16x16 32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-    <title>GridFlow</title>
+
+
+
+    <title>GridFlow | Intelligent EV Charging Solutions</title>
 </head>
 <body>
     <header>
@@ -24,9 +36,8 @@
             </ul>
         </nav>                   
     </header>
+
     <div class="wrapper">
-     
-        
         <section id="hero" class="hero">
             <div class="hero-background"></div>
             <div class="overlay"></div>
@@ -36,19 +47,19 @@
                 <div class="circle circle-3"></div>
                 <div class="hero-content">
                     <div class="hero-heading">
-                        <h1>EV Charging Made Simple</h1>
+                        <h1>Revolutionizing EV Charging</h1>
                     </div>
-                    <p>GridFlow provides an end-to-end solution for EV drivers, property owners, and charging station operators.</p>
-                    <a href="#" class="cta-button">Learn More</a>
-                </div>
+                    <p>GridFlow delivers a comprehensive solution for EV drivers, property owners, and charging station operators.</p>
+                    <a href="#showcase" class="cta-button">Discover More</a>
+                  </div>
             </div>
         </section>
     </div>
 
     <section id="showcase" class="showcase">
         <div class="showcase-content" data-aos="fade-right">
-            <h2>Powering the Future of EV Charging</h2>
-            <p>Maximize revenue, optimize energy usage, and ensure uptime with our AI-powered software suite</p>
+            <h2>Empowering the Future of EV Charging</h2>
+            <p>Unlock maximum revenue, optimize energy consumption, and ensure reliability with our AI-driven software suite</p>
         </div>
         
         <div class="showcase-image" data-aos="fade-left">
@@ -56,6 +67,7 @@
         </div>
     </section>
 
+    <div class="ind-wrapper">
     <section id="industries" class="industries" >
         <div class="industries-carousel"data-aos="fade-right">
             <div class="swiper">
@@ -134,43 +146,80 @@
         </div>
        
     </section>
-    
+    </div>
 
     <section id="features" class="features">
-        <div class="feature-header">
-            <h2>What sets us apart?</h2>
+      <div class="features-container">
+        <div class="left-column">
+          <h2>Key Features</h2>
+          <p>Discover how our solutions cater to property developers and charging station operators.</p>
         </div>
-        <div class="feature-container">
-            <div class="feature" data-feature="software-suite">
-                <div class="icon-wrapper">
-                    <img src="software-suite-icon.svg" alt="Software Suite Icon" class="feature-icon">
-                </div>
-                <h3>GridFlow Software Suite</h3>
-                <p>Our comprehensive software suite helps deploy and manage EV charging infrastructure.</p>
-            </div>
-            <div class="feature" data-feature="ai-powered">
-                <div class="icon-wrapper">
-                    <img src="ai-powered-icon.svg" alt="AI-powered Features Icon" class="feature-icon">
-                </div>
-                <h3>AI-Powered Features</h3>
-                <p>GridFlow integrates AI algorithms for enhanced efficiency and user experience.</p>
-            </div>
-            <div class="feature" data-feature="mobile-app">
-                <div class="icon-wrapper">
-                    <img src="mobile-app-icon.svg" alt="Mobile App for EV Drivers Icon" class="feature-icon">
-                </div>
-                <h3>Mobile App for EV Drivers</h3>
-                <p>Our user-friendly mobile app offers real-time charging station information and more.</p>
-            </div>
+        <div class="right-column">
+          <div class="feature-card">
+            <img src="icons/integration.png" alt="Feature Icon 1">
+            <h3>Seamless Integration</h3>
+            <button class="read-more">
+              <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
+            </button>          </div>
+          <div class="feature-card">
+            <img src="icons/charging.png" alt="Feature Icon 2">
+            <h3>Intelligent Charging</h3>
+            <button class="read-more">
+              <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
+
+            </button>          </div>
+          <div class="feature-card">
+            <img src="icons/revenue.png" alt="Feature Icon 3">
+            <h3>Maximize Revenue</h3>
+            <button class="read-more">
+              <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
+
+            </button>          </div>
+          <div class="feature-card">
+            <img src="icons/real-time.png" alt="Feature Icon 4">
+            <h3>Real-Time Monitoring</h3>
+            <button class="read-more">
+              <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
+
+            </button>          </div>
+          <div class="feature-card">
+            <img src="icons/AI.png" alt="Feature Icon 5">
+            <h3>AI-Powered Optimization</h3>
+            <button class="read-more">
+              <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
+
+            </button>          </div>
+          <div class="feature-card">
+            <img src="icons/remote.png" alt="Feature Icon 6">
+            <h3>Remote Diagnostics</h3>
+            <button class="read-more">
+              <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
+
+            </button>          </div>
+          <div class="feature-card">
+            <img src="icons/central.png" alt="Feature Icon 7">
+            <h3>Centralized Management</h3>
+            <button class="read-more">
+              <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
+
+            </button>          </div>
+          <div class="feature-card">
+            <img src="icons/remote.png" alt="Feature Icon 8">
+            <h3>Customizable Reporting</h3>
+            <button class="read-more">
+              <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
+
+            </button>          </div>
+          <div class="feature-card">
+            <img src="icons/24-7.png" alt="Feature Icon 9">
+            <h3>24/7 Support</h3>
+            <button class="read-more">
+            <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
+            </button>          </div>
         </div>
-        <div class="feature-modal hidden">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 class="modal-title"></h2>
-                <p class="modal-description"></p>
-            </div>
-        </div>
+      </div>
     </section>
+    
     
     
 

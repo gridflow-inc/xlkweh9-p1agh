@@ -42,51 +42,40 @@ const menuToggle = document.querySelector("#menu-toggle");
 menuToggle.addEventListener("click", toggleMenu);
 
 
-const features = document.querySelectorAll('.feature');
-const featureModal = document.querySelector('.feature-modal');
-const modalContent = featureModal.querySelector('.modal-content');
-const closeModal = featureModal.querySelector('.close');
-const modalTitle = modalContent.querySelector('.modal-title');
-const modalDescription = modalContent.querySelector('.modal-description');
+  function smoothScroll(target, duration) {
+    const targetPosition = target.offsetTop;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
 
-const featureDetails = {
-    "software-suite": {
-        title: "GridFlow Software Suite",
-        description: "Our comprehensive software suite helps deploy and manage EV charging infrastructure. It offers real-time monitoring, usage analytics, pricing optimization, and more."
-    },
-    "ai-powered": {
-        title: "AI-Powered Features",
-        description: "GridFlow integrates AI algorithms for enhanced efficiency and user experience. AI-powered features include predictive maintenance, energy optimization, customer behavior analysis, and more."
-    },
-    "mobile-app": {
-        title: "Mobile App for EV Drivers",
-        description: "Our user-friendly mobile app offers real-time charging station information, customizable payment options, detailed station information, user reviews, and more."
+    function animation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const run = ease(timeElapsed, startPosition, distance, duration);
+      window.scrollTo(0, run);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
     }
-};
 
-function openFeatureModal(feature) {
-    const { title, description } = featureDetails[feature];
-    modalTitle.textContent = title;
-    modalDescription.textContent = description;
-    featureModal.classList.remove('hidden');
-}
+    function ease(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return (c / 2) * t * t + b;
+      t--;
+      return (-c / 2) * (t * (t - 2) - 1) + b;
+    }
 
-function closeFeatureModal() {
-    featureModal.classList.add('hidden');
-}
+    requestAnimationFrame(animation);
+  }
 
-features.forEach(feature => {
-    feature.addEventListener('click', () => {
-        openFeatureModal(feature.dataset.feature);
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const target = document.querySelector(this.getAttribute('href'));
+      smoothScroll(target, 2000); // 1000ms = 1s scrolling duration
     });
-});
+  });
 
-closeModal.addEventListener('click', closeFeatureModal);
-featureModal.addEventListener('click', (e) => {
-    if (e.target === featureModal) {
-        closeFeatureModal();
-    }
-});
+
 
 
 
