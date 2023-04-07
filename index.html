@@ -26,18 +26,18 @@
 <body>
     <header>
         <nav>
-            <a href="#" class="logo">
+            <a href="#wrapper" class="logo">
                 <img src="logo-image.png" alt="Logo">
             </a>
             <ul class="nav-links">
-                <li><a href="#"><span>Features</span></a></li>
-                <li><a href="#"><span>Pricing</span></a></li>
-                <li><a href="#"><span>Contact</span></a></li>
+                <li><a href="#"><span>About</span></a></li>
+                <li><a href="#features"><span>Features</span></a></li>
+                <li><a href="#" class="cta-nav">Experience GridFlow</a></li>
             </ul>
         </nav>                   
     </header>
 
-    <div class="wrapper">
+    <div id="wrapper" class="wrapper">
         <section id="hero" class="hero">
             <div class="hero-background"></div>
             <div class="overlay"></div>
@@ -151,66 +151,66 @@
     <section id="features" class="features">
       <div class="features-container">
         <div class="left-column">
-          <h2>Key Features</h2>
-          <p>Discover how our solutions cater to property developers and charging station operators.</p>
+          <h2>The GridFlow Advantage</h2>
+          <p>Discover how our solutions empower businesses and organizations to take charge of their EV charging infrastructure.</p>
         </div>
         <div class="right-column">
-          <div class="feature-card">
+          <div class="feature-card" id="card1">
             <img src="icons/integration.png" alt="Feature Icon 1">
             <h3>Seamless Integration</h3>
             <button class="read-more">
               <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
             </button>          </div>
-          <div class="feature-card">
+          <div class="feature-card" id="card2">
             <img src="icons/charging.png" alt="Feature Icon 2">
             <h3>Intelligent Charging</h3>
             <button class="read-more">
               <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
 
             </button>          </div>
-          <div class="feature-card">
+          <div class="feature-card" id="card3">
             <img src="icons/revenue.png" alt="Feature Icon 3">
             <h3>Maximize Revenue</h3>
             <button class="read-more">
               <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
 
             </button>          </div>
-          <div class="feature-card">
+          <div class="feature-card" id="card4">
             <img src="icons/real-time.png" alt="Feature Icon 4">
             <h3>Real-Time Monitoring</h3>
             <button class="read-more">
               <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
 
             </button>          </div>
-          <div class="feature-card">
+          <div class="feature-card" id="card5">
             <img src="icons/AI.png" alt="Feature Icon 5">
             <h3>AI-Powered Optimization</h3>
             <button class="read-more">
               <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
 
             </button>          </div>
-          <div class="feature-card">
+          <div class="feature-card" id="card6">
             <img src="icons/remote.png" alt="Feature Icon 6">
             <h3>Remote Diagnostics</h3>
             <button class="read-more">
               <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
 
             </button>          </div>
-          <div class="feature-card">
+          <div class="feature-card" id="card7">
             <img src="icons/central.png" alt="Feature Icon 7">
             <h3>Centralized Management</h3>
             <button class="read-more">
               <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
 
             </button>          </div>
-          <div class="feature-card">
+          <div class="feature-card" id="card8">
             <img src="icons/remote.png" alt="Feature Icon 8">
             <h3>Customizable Reporting</h3>
             <button class="read-more">
               <!-- <img src="arrow.png" alt="Arrow Icon" class="arrow-icon"> -->
 
             </button>          </div>
-          <div class="feature-card">
+          <div class="feature-card" id="card9">
             <img src="icons/24-7.png" alt="Feature Icon 9">
             <h3>24/7 Support</h3>
             <button class="read-more">
@@ -220,8 +220,44 @@
       </div>
     </section>
     
-    
-    
+    <div id="modal" class="modal">
+      <span class="close">&times;</span>
+      <div id="modal-content" class="modal-content">
+        <!-- Modal content will be loaded here -->
+      </div>
+    </div>
+
+    <section id="form" class="form">
+      <iframe
+        id="typeform-full"
+        width="100%"
+        height="1000px"
+        frameborder="0"
+        allow="camera; microphone; autoplay; encrypted-media;"
+        src="https://akhemka.typeform.com/to/sXTdFZVc"
+      ></iframe>
+    <script>
+      (function () {
+        var qs,
+          js,
+          q,
+          s,
+          d = document,
+          gi = d.getElementById,
+          ce = d.createElement,
+          gt = d.getElementsByTagName,
+          id = "typef_orm_share",
+          b = "https://embed.typeform.com/";
+        if (!gi.call(d, id)) {
+          js = ce.call(d, "script");
+          js.id = id;
+          js.src = b + "embed.js";
+          q = gt.call(d, "script")[0];
+          q.parentNode.insertBefore(js, q);
+        }
+      })();
+    </script>
+  </section>
 
     <footer>
         <p>&copy; GridFlow Inc. 2023. All rights reserved.</p>

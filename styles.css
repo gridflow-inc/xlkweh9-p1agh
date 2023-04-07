@@ -102,8 +102,28 @@ nav ul li a:hover {
 .nav-links.active {
     display: flex;
     flex-direction: column;
-  }
+}
   
+.cta-nav {
+    display: inline-block;
+    background-color: rgb(226, 169, 62);
+    /* Set background-color with rgba() */
+    color: #fff;
+    text-decoration: none;
+    /* padding: 0.75rem 1.5rem; */
+    border-radius: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+    /* Add border-color to the transition */
+    border: 2px solid rgba(255, 255, 255, 1);
+    /* Set border color with rgba() */
+}
+
+.cta-nav:hover {
+    background-color: rgba(242, 214, 0, 0);
+    /* Change background-color with transparency on hover */
+    border-color: rgba(242, 214, 0, 0.8);
+    /* Change border color with transparency on hover */
+}
 
 /* Add the following code */
 .wrapper {
@@ -624,6 +644,45 @@ header {
     bottom: 10px;
   }
   
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .close {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+  }
+  
+  .modal-content {
+    margin: 10% auto;
+    padding: 2rem;
+    width: 80%;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 20px;
+  }
+  
+
+.form{
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 100%; 
+}
+
   
   
   @media screen and (max-width: 768px) {

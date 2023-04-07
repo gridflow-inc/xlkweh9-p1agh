@@ -98,7 +98,7 @@ function windowResized() {
         const minDistToEdge = Math.min(distToLeft, distToRight, distToTop, distToBottom);
     
         // Calculate transparency based on distance to the edge (0 at the edge, 100 at 100px or more from the edge)
-        const transparency = Math.min(180, minDistToEdge);
+        const transparency = Math.min(200, minDistToEdge);
     
         fill(253, 154, 39, transparency);
         noStroke();
