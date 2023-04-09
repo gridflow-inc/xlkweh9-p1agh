@@ -773,8 +773,11 @@ header {
     color: #fff;
     font-family: "Helvetica Neue", sans-serif;
     font-weight: 300;
-    z-index: 4;
-}
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+  }
+  
 
 .footer-container {
     display: flex;
@@ -783,7 +786,6 @@ header {
     max-width: 100%;
     padding: 1rem 0;
     font-size: 14px;
-    z-index: 4;
 }
 
 .footer-logo {
