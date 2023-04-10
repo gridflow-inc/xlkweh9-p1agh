@@ -188,10 +188,12 @@ main {
   @media (max-width: 767px) {
     .company-info {
       text-align: center;
+      letter-spacing: 2px;
     }
 
     .company-info p {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+
     }
 
     .title {
