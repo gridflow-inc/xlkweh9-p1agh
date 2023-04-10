@@ -6,6 +6,14 @@
         window.scrollTo(0, 0);
       }
     </script>
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          window.scrollTo(0, 0);
+        }, 100);
+      });
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -228,36 +236,8 @@
     </div>
 
     <section id="form" class="form">
-      <iframe
-        id="typeform-full"
-        width="100%"
-        height="1000px"
-        frameborder="0"
-        allow="camera; microphone; autoplay; encrypted-media;"
-        src="https://akhemka.typeform.com/to/sXTdFZVc"
-      ></iframe>
-    <script>
-      (function () {
-        var qs,
-          js,
-          q,
-          s,
-          d = document,
-          gi = d.getElementById,
-          ce = d.createElement,
-          gt = d.getElementsByTagName,
-          id = "typef_orm_share",
-          b = "https://embed.typeform.com/";
-        if (!gi.call(d, id)) {
-          js = ce.call(d, "script");
-          js.id = id;
-          js.src = b + "embed.js";
-          q = gt.call(d, "script")[0];
-          q.parentNode.insertBefore(js, q);
-        }
-      })();
-    </script>
-  </section>
+      <div id="typeform-container"></div>
+    </section>    
 
   <footer>
     <div class="footer-container">
@@ -288,6 +268,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="interactive-bg.js"></script>
+    <script src="tpform.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const swiper = new Swiper('.swiper', {
