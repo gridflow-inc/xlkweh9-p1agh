@@ -126,7 +126,7 @@ main {
   overflow: hidden;
   border-radius: 20px;
   box-shadow: inset 0 0 20px 6px rgba(255, 200, 70, 0.1);
-  background-image: url('co-founders-bg.png');
+  background-image: url('co-founders-bg.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
