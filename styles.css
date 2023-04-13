@@ -20,7 +20,7 @@ html::-webkit-scrollbar {
 body {
     margin: -1px 0 0 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Helvetica Neue", "Roboto", sans-serif;
     background: linear-gradient(to bottom, #ffc400 0%, #000000 40%);
     color: #fff;
     overflow-y: scroll;
@@ -81,7 +81,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 300;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', "Roboto", Helvetica, Arial, sans-serif;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: color 0.3s;
@@ -254,8 +254,8 @@ header {
     font-size: 5rem;
     font-weight: 100;
     /* Set the font weight to UltraLight */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    /* Set the font family to Helvetica UltraLight */
+    font-family: 'Helvetica Neue', "Roboto", Helvetica, Arial, sans-serif;
+    /* Set the font family to "Roboto", Helvetica UltraLight */
     letter-spacing: 5px;
     /* Increase character spacing */
     margin-bottom: 2rem;
@@ -268,8 +268,8 @@ header {
     font-size: 1.5rem;
     font-weight: 300;
     /* Set the font weight to light */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    /* Set the font family to Helvetica Light */
+    font-family: 'Helvetica Neue', "Roboto", Helvetica, Arial, sans-serif;
+    /* Set the font family to "Roboto", Helvetica Light */
     margin-bottom: 2rem;
 }
 
@@ -310,14 +310,14 @@ header {
 .showcase-content h2 {
     font-size: 2.5rem;
     font-weight: 300;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', "Roboto", Helvetica, Arial, sans-serif;
     margin-bottom: 1rem;
 }
 
 .showcase-content p {
     font-size: 1.2rem;
     font-weight: 300;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', "Roboto", Helvetica, Arial, sans-serif;
     line-height: 1.6;
 }
 
@@ -359,14 +359,14 @@ header {
 .industries-content h2 {
     font-size: 2.5rem;
     font-weight: 300;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', "Roboto", Helvetica, Arial, sans-serif;
     margin-bottom: 1rem;
 }
 
 .industries-content p {
     font-size: 1.2rem;
     font-weight: 300;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', "Roboto", Helvetica, Arial, sans-serif;
     line-height: 1.6;
 }
 .industries-carousel {
@@ -443,7 +443,7 @@ header {
   .carousel-text-glass h3 {
     font-size: 2rem;
     font-weight: 300;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', "Roboto", Helvetica, Arial, sans-serif;
     margin-bottom: 3rem;
     letter-spacing: 1px;
 }
@@ -451,7 +451,7 @@ header {
 .carousel-text-glass p {
     font-size: 1.2rem;
     font-weight: 300;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', "Roboto", Helvetica, Arial, sans-serif;
     line-height: 1.6;
     text-align: center;
     max-width: 80%;
@@ -463,7 +463,7 @@ header {
 .industry-overlay h3 {
     font-size: 2rem;
     font-weight: 300;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', "Roboto", Helvetica, Arial, sans-serif;
     margin-bottom: 3rem;
     letter-spacing: 1px;
 }
@@ -471,7 +471,7 @@ header {
 .industry-overlay p {
     font-size: 1.2rem;
     font-weight: 300;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', "Roboto", Helvetica, Arial, sans-serif;
     line-height: 1.6;
     text-align: center;
     max-width: 80%;
@@ -524,14 +524,14 @@ header {
   .left-column h2 {
     font-size: 2.5rem;
     font-weight: 300;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', "Roboto", Helvetica, Arial, sans-serif;
     margin-bottom: 1rem;
   }
   
   .left-column p {
     font-size: 1.2rem;
     font-weight: 300;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', "Roboto", Helvetica, Arial, sans-serif;
     line-height: 1.6;
   }
   
@@ -574,7 +574,7 @@ header {
   .feature-card h3 {
     font-size: 1.2rem;
     font-weight: 300;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', "Roboto", Helvetica, Arial, sans-serif;
     text-align: center;
     margin-bottom: 2rem;
   }
@@ -589,7 +589,7 @@ header {
     cursor: pointer;
     font-size: 0.8rem;
     font-weight: 300;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', "Roboto", Helvetica, Arial, sans-serif;
     width: 40px;
     height: 40px;
     position: absolute;
@@ -771,7 +771,7 @@ header {
   footer {
     background: linear-gradient(to bottom, #000 20%, #ffc400dd 210%);
     color: #fff;
-    font-family: "Helvetica Neue", sans-serif;
+    font-family: "Helvetica Neue", "Roboto", sans-serif;
     font-weight: 300;
     bottom: 0;
     width: 100%;
