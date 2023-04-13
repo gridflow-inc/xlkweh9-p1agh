@@ -162,7 +162,7 @@ header {
 
 .hero-background {
     margin: -1px 0 0 0;
-    background: url('hero-bg.jpg') no-repeat center center/cover;
+    background: url('hero-bg.webp') no-repeat center center/cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -173,7 +173,7 @@ header {
 }
 
 .overlay {
-    background: url('overlay.png') no-repeat center center/cover;
+    background: url('overlay.webp') no-repeat center center/cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -603,7 +603,7 @@ header {
     display: block;
     width: 100%; /* Increase the width */
     height: 100%; /* Increase the height */
-    background-image: url('arrow.png');
+    background-image: url('arrow.webp');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
