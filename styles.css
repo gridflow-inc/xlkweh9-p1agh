@@ -30,7 +30,7 @@ html::-webkit-scrollbar {
 body {
     margin: -1px 0 0 0;
     padding: 0;
-    font-family: "Helvetica Neue",Hel, Robo, sans-serif;
+    font-family: "Helvetica Neue", Hel, Robo, sans-serif;
     background: linear-gradient(to bottom, #ffc400 0%, #000000 40%);
     color: #fff;
     overflow-y: scroll;
@@ -499,12 +499,13 @@ header {
     }
     
     .showcase-content {
-        max-width: 100%;
-        padding-bottom: 2rem;
+        max-width: 50%;
+        padding-bottom: 20rem;
     }
 
     .showcase-image {
         width: 100%;
+        padding-bottom: 30px;
     }
 }
 
@@ -730,13 +731,16 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+    .hero {
+      text-align: centre;
+    }
     .hero-content {
         max-width: 90%;
         /* Increase the width for mobile devices */
     }
 
     .hero-content h1 {
-        font-size: 3.5rem;
+        font-size: 1.5rem;
         /* Decrease the font size for mobile devices */
     }
 
