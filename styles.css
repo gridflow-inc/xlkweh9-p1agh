@@ -678,7 +678,7 @@ header {
   
   @media screen and (max-width: 768px) {
     .features-container {
-      flex-direction: column;
+      
     }
   
     .left-column {
