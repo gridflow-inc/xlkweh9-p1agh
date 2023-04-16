@@ -761,6 +761,19 @@ header {
   }
 }
 
+@media screen and (max-width: 960px) {
+  
+  .showcase-content h2 {
+    text-align: left;
+    font-size: 1.5rem;
+  }
+  .showcase-content p {
+    display: none;
+  }
+}
+    
+
+
 @media screen and (max-width: 768px) {
   .ind-wrapper {
     flex-direction: column;
@@ -774,6 +787,15 @@ header {
   .industries-content {
     text-align: center;
     padding-top: 60rem;
+    display: none;
+  }
+}
+
+@media screen and ( max-width: 960px) {
+  .ind-wrapper {
+    flex-direction: column;
+  }
+  .industries-content {
     display: none;
   }
 }
