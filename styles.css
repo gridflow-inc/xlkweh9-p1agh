@@ -761,6 +761,22 @@ header {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .ind-wrapper {
+    flex-direction: column;
+  }
+  .industry-card {
+    width: 20.5rem;
+  }
+  .industry-overlay {
+    text-align: center;
+  }
+  .industries-content {
+    text-align: center;
+    padding-top: 60rem;
+  }
+}
+
 
 @media screen and (max-width: 768px) {
     .nav-links {
