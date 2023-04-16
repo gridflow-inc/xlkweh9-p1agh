@@ -740,19 +740,20 @@ header {
 
 @media screen and (max-width: 768px) {
   .showcase {
-      padding-top: 7rem;
+      padding-top: 14rem;
       flex-direction: column;
   }
   
   .showcase-content h2 {
     text-align: center;
-    font-size:  1.7rem;  
+    font-size:  2rem;  
     font-weight: bold;
   }
 
   .showcase-content p {
     text-align: center;
     font-size: 1rem;
+    display: none;
   }
 
   .showcase-image {
@@ -761,7 +762,7 @@ header {
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 768px)and (max-width: 1200px) {
   
   .showcase-content h2 {
     text-align: left;
@@ -791,7 +792,7 @@ header {
   }
 }
 
-@media screen and ( max-width: 960px) {
+@media screen and (min-width: 768px) and ( max-width: 1514px) {
   .ind-wrapper {
     flex-direction: column;
   }
@@ -815,6 +816,10 @@ header {
 
 @media screen and (max-width: 768px) {
   
+}
+
+.tf-v1-widget-fullscreen {
+  position: relative!important;
 }
   
  .menu-toggle {
